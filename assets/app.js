@@ -8,8 +8,10 @@
 // any CSS you import will output into a single css file (app.css in this case)
 import './styles/app.scss';
 
-import logoPath from '/styles/images/loup.png';
+
 
 // start the Stimulus application
 import './bootstrap';
 console.log('Hello Webpack Encore !')
+
+require('bootstrap');
