@@ -29,6 +29,7 @@ class ProgramController extends AbstractController
                 'No program with id : '.$id.' found in program\'s table.'
             );
         }
+        
         return $this->render('program/show.html.twig', [
            'id' => $id,
            'program' => $program
@@ -36,7 +37,7 @@ class ProgramController extends AbstractController
         ]);
     }
 
-    #[Route('/{programid}/seasons/{seasonid}', name: 'season_show')]
+    #[Route('/{programid}/seasons/{seasonid}', name: 'season')]
     public function showSeason(int $programid, int $seasonid, ProgramRepository $programRepository, SeasonRepository $seasonRepository)
     {
         $program = $programRepository->findOneBy(
